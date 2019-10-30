@@ -1,0 +1,36 @@
+---
+title: "Fuel Economy Information"
+
+output: html_document
+---
+
+```{r setup,include=FALSE,cache=TRUE,warning=FALSE,message=FALSE,comment=NA}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+This app shows the fuel economy data for diffent models of cars manufatured in 1999 and 2008. The fuel economy on city roads and highways are shown as a box plot for the following vairables.
+
+* Number of Cylinders
+* Type of Transmission
+* Engine's Diplacement in liters
+* Class ( Type) of car
+
+The following shows the summary of fuel ecomony data sub set that is available in R ggplot2 package. The original data set is available from EPA's web site at http://fueleconomy.gov 
+
+```{r  echo = FALSE, include=TRUE,cache=TRUE,warning=FALSE,message=FALSE,comment=NA }
+
+library(ggplot2)
+
+summary(mpg)
+
+```
+
+## Usage Guide
+
+The fuel economy box plots app can be accessed from the URL : https://vvasam.shinyapps.io/ddshinyapp/
+
+Choose any of the variables from the list box "Choose Variable" to see box plots of highway mileage and city mileage. Move cursor on to box plot to see informaiton of the plot interacively.
+
+

@@ -1,0 +1,10 @@
+name: ddshinyapp
+title:
+username:
+account: vvasam
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1386179
+bundleId: 2541384
+url: https://vvasam.shinyapps.io/ddshinyapp/
+when: 1572203146.79426
