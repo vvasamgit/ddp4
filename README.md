@@ -2,4 +2,6 @@
 
 This project has files for Shiny app and presentation
 
-Shiny app folder is ddshinyapp
+Shiny applicaiton source code folder is ddshinyapp
+
+Presentation slidify source folder is dd4slidifypres

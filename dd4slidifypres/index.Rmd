@@ -16,6 +16,9 @@ knit        : slidify::knit2slides
 1. Summary of the data set variables
 2. R Code To Show Box Plot of Fuel economy based on number of Cylinders
 3. Sample Box Plot View of App for Fuel economy based on number of Cylinders
+4. Shiny App URL: https://vvasam.shinyapps.io/ddshinyapp/
+5. Github repository: https://github.com/vvasamgit/ddp4
+
 
 --- .class #id 
 
