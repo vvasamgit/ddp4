@@ -21,11 +21,9 @@ knit        : slidify::knit2slides
 
 ## Summary of the data set variables
 
-```{r  echo = TRUE, include=TRUE,cache=TRUE,warning=FALSE,message=FALSE,comment=NA }
+```{r  echo = FALSE, include=TRUE,cache=TRUE,warning=FALSE,message=FALSE,comment=NA }
 
 library(ggplot2)
-library(dplyr)
-library(gridExtra)
 summary(mpg)
 ```
 
@@ -48,8 +46,10 @@ mpginshwy<-data.frame(mpg[,xVar],mpg$hwy)
 colnames(mpginshwy) <- c(xVar, yVarH)
 mpginscty<-data.frame(mpg[,xVar],mpg$cty)
 colnames(mpginscty) <- c(xVar, yVarC)
-plotinshwy<-ggplot(mpginshwy, aes_(x=as.name(xVar), y=as.name(yVarH),color=as.name(yVarH) ))+geom_boxplot()
-plotinscty<-ggplot(mpginscty, aes_(x=as.name(xVar), y=as.name(yVarC),color=as.name(yVarC) ))+geom_boxplot()
+plotinshwy<-ggplot(mpginshwy, aes_(x=as.name(xVar), y=as.name(yVarH),color=as.name(yVarH) ))
++geom_boxplot()
+plotinscty<-ggplot(mpginscty, aes_(x=as.name(xVar), y=as.name(yVarC),color=as.name(yVarC) ))
++geom_boxplot()
 grid.arrange(plotinshwy,plotinscty)
 
 ```
@@ -86,4 +86,3 @@ plotinscty<-ggplot(mpginscty, aes_(x=as.name(xVar), y=as.name(yVarC),color=as.na
 grid.arrange(plotinshwy,plotinscty)
 
 ```
---- .class #id

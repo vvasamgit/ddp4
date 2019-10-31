@@ -1,9 +1,8 @@
 
 library(ggplot2)
-library(plotly)
 library(dplyr)
 library(gridExtra)
-library(webshot)
+
 
 xTitle<-'Cylinders'
 

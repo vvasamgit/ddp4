@@ -69,13 +69,7 @@
   </hgroup>
   
   <article data-timings="">
-    <pre><code class="r">library(ggplot2)
-library(dplyr)
-library(gridExtra)
-summary(mpg)
-</code></pre>
-
-<pre><code> manufacturer          model               displ            year     
+    <pre><code> manufacturer          model               displ            year     
  Length:234         Length:234         Min.   :1.600   Min.   :1999  
  Class :character   Class :character   1st Qu.:2.400   1st Qu.:1999  
  Mode  :character   Mode  :character   Median :3.300   Median :2004  
@@ -121,8 +115,10 @@ mpginshwy&lt;-data.frame(mpg[,xVar],mpg$hwy)
 colnames(mpginshwy) &lt;- c(xVar, yVarH)
 mpginscty&lt;-data.frame(mpg[,xVar],mpg$cty)
 colnames(mpginscty) &lt;- c(xVar, yVarC)
-plotinshwy&lt;-ggplot(mpginshwy, aes_(x=as.name(xVar), y=as.name(yVarH),color=as.name(yVarH) ))+geom_boxplot()
-plotinscty&lt;-ggplot(mpginscty, aes_(x=as.name(xVar), y=as.name(yVarC),color=as.name(yVarC) ))+geom_boxplot()
+plotinshwy&lt;-ggplot(mpginshwy, aes_(x=as.name(xVar), y=as.name(yVarH),color=as.name(yVarH) ))
++geom_boxplot()
+plotinscty&lt;-ggplot(mpginscty, aes_(x=as.name(xVar), y=as.name(yVarC),color=as.name(yVarC) ))
++geom_boxplot()
 grid.arrange(plotinshwy,plotinscty)
 </code></pre>
 
@@ -138,8 +134,7 @@ grid.arrange(plotinshwy,plotinscty)
   </hgroup>
   
   <article data-timings="">
-    <p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3">
---- .class #id</p>
+    <p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"></p>
 
   </article>
   <!-- Presenter Notes -->

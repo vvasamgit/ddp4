@@ -22,13 +22,6 @@ knit        : slidify::knit2slides
 ## Summary of the data set variables
 
 
-```r
-library(ggplot2)
-library(dplyr)
-library(gridExtra)
-summary(mpg)
-```
-
 ```
  manufacturer          model               displ            year     
  Length:234         Length:234         Min.   :1.600   Min.   :1999  
@@ -72,8 +65,10 @@ mpginshwy<-data.frame(mpg[,xVar],mpg$hwy)
 colnames(mpginshwy) <- c(xVar, yVarH)
 mpginscty<-data.frame(mpg[,xVar],mpg$cty)
 colnames(mpginscty) <- c(xVar, yVarC)
-plotinshwy<-ggplot(mpginshwy, aes_(x=as.name(xVar), y=as.name(yVarH),color=as.name(yVarH) ))+geom_boxplot()
-plotinscty<-ggplot(mpginscty, aes_(x=as.name(xVar), y=as.name(yVarC),color=as.name(yVarC) ))+geom_boxplot()
+plotinshwy<-ggplot(mpginshwy, aes_(x=as.name(xVar), y=as.name(yVarH),color=as.name(yVarH) ))
++geom_boxplot()
+plotinscty<-ggplot(mpginscty, aes_(x=as.name(xVar), y=as.name(yVarC),color=as.name(yVarC) ))
++geom_boxplot()
 grid.arrange(plotinshwy,plotinscty)
 ```
 
@@ -82,4 +77,3 @@ grid.arrange(plotinshwy,plotinscty)
 ## Sample Box Plot View of App for Fuel economy based on number of Cylinders
 
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png)
---- .class #id
